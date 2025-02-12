@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Neumont\\Q6\\PRO150\\BadEnglishGames\\BadEnglishGames\\BadEnglishGames.csproj": {}
+    "C:\\Neumont\\Q6\\PRO150\\Pro150_ThinkTank\\BadEnglishGames\\BadEnglishGames\\BadEnglishGames.csproj": {}
   },
   "projects": {
-    "C:\\Neumont\\Q6\\PRO150\\BadEnglishGames\\BadEnglishGames\\BadEnglishGames.csproj": {
+    "C:\\Neumont\\Q6\\PRO150\\Pro150_ThinkTank\\BadEnglishGames\\BadEnglishGames\\BadEnglishGames.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Neumont\\Q6\\PRO150\\BadEnglishGames\\BadEnglishGames\\BadEnglishGames.csproj",
+        "projectUniqueName": "C:\\Neumont\\Q6\\PRO150\\Pro150_ThinkTank\\BadEnglishGames\\BadEnglishGames\\BadEnglishGames.csproj",
         "projectName": "BadEnglishGames",
-        "projectPath": "C:\\Neumont\\Q6\\PRO150\\BadEnglishGames\\BadEnglishGames\\BadEnglishGames.csproj",
+        "projectPath": "C:\\Neumont\\Q6\\PRO150\\Pro150_ThinkTank\\BadEnglishGames\\BadEnglishGames\\BadEnglishGames.csproj",
         "packagesPath": "C:\\Users\\cschade\\.nuget\\packages\\",
-        "outputPath": "C:\\Neumont\\Q6\\PRO150\\BadEnglishGames\\BadEnglishGames\\obj\\",
+        "outputPath": "C:\\Neumont\\Q6\\PRO150\\Pro150_ThinkTank\\BadEnglishGames\\BadEnglishGames\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
