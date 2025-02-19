@@ -6,7 +6,7 @@
     font-family:"Open Sans",sans-serif;
 }
 
-body{
+body main{
     display:flex;
     align-items:center;
     justify-content:center;
@@ -15,7 +15,7 @@ body{
     padding:0, 10px;
 }
 
-body::before{
+body::before main{
     content:"";
     position:absolute;
     width:100%;
