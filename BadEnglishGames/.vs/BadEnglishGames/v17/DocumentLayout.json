@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\C\u002B\u002B\\Pro150_ThinkTank\\BadEnglishGames\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6EC71117-9701-498E-B6D7-F3FBDB0470D3}|BadEnglishGames\\BadEnglishGames.csproj|c:\\c\u002B\u002B\\pro150_thinktank\\badenglishgames\\badenglishgames\\pages\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6EC71117-9701-498E-B6D7-F3FBDB0470D3}|BadEnglishGames\\BadEnglishGames.csproj|solutionrelative:badenglishgames\\pages\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EC71117-9701-498E-B6D7-F3FBDB0470D3}|BadEnglishGames\\BadEnglishGames.csproj|c:\\c\u002B\u002B\\pro150_thinktank\\badenglishgames\\badenglishgames\\pages\\profile.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EC71117-9701-498E-B6D7-F3FBDB0470D3}|BadEnglishGames\\BadEnglishGames.csproj|solutionrelative:badenglishgames\\pages\\profile.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EC71117-9701-498E-B6D7-F3FBDB0470D3}|BadEnglishGames\\BadEnglishGames.csproj|c:\\c\u002B\u002B\\pro150_thinktank\\badenglishgames\\badenglishgames\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6EC71117-9701-498E-B6D7-F3FBDB0470D3}|BadEnglishGames\\BadEnglishGames.csproj|solutionrelative:badenglishgames\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EC71117-9701-498E-B6D7-F3FBDB0470D3}|BadEnglishGames\\BadEnglishGames.csproj|c:\\c\u002B\u002B\\pro150_thinktank\\badenglishgames\\badenglishgames\\pages\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EC71117-9701-498E-B6D7-F3FBDB0470D3}|BadEnglishGames\\BadEnglishGames.csproj|solutionrelative:badenglishgames\\pages\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EC71117-9701-498E-B6D7-F3FBDB0470D3}|BadEnglishGames\\BadEnglishGames.csproj|c:\\c\u002B\u002B\\pro150_thinktank\\badenglishgames\\badenglishgames\\pages\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6EC71117-9701-498E-B6D7-F3FBDB0470D3}|BadEnglishGames\\BadEnglishGames.csproj|solutionrelative:badenglishgames\\pages\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EC71117-9701-498E-B6D7-F3FBDB0470D3}|BadEnglishGames\\BadEnglishGames.csproj|c:\\c\u002B\u002B\\pro150_thinktank\\badenglishgames\\badenglishgames\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6EC71117-9701-498E-B6D7-F3FBDB0470D3}|BadEnglishGames\\BadEnglishGames.csproj|solutionrelative:badenglishgames\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6EC71117-9701-498E-B6D7-F3FBDB0470D3}|BadEnglishGames\\BadEnglishGames.csproj|c:\\c\u002B\u002B\\pro150_thinktank\\badenglishgames\\badenglishgames\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6EC71117-9701-498E-B6D7-F3FBDB0470D3}|BadEnglishGames\\BadEnglishGames.csproj|solutionrelative:badenglishgames\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -14,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,7 +46,84 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\C\u002B\u002B\\Pro150_ThinkTank\\BadEnglishGames\\BadEnglishGames\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "BadEnglishGames\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\C\u002B\u002B\\Pro150_ThinkTank\\BadEnglishGames\\BadEnglishGames\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "BadEnglishGames\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-19T02:06:20.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "C:\\C\u002B\u002B\\Pro150_ThinkTank\\BadEnglishGames\\BadEnglishGames\\Pages\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "BadEnglishGames\\Pages\\Register.cshtml.cs",
+              "ToolTip": "C:\\C\u002B\u002B\\Pro150_ThinkTank\\BadEnglishGames\\BadEnglishGames\\Pages\\Register.cshtml.cs",
+              "RelativeToolTip": "BadEnglishGames\\Pages\\Register.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T01:32:50.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Profile.cshtml.cs",
+              "DocumentMoniker": "C:\\C\u002B\u002B\\Pro150_ThinkTank\\BadEnglishGames\\BadEnglishGames\\Pages\\Profile.cshtml.cs",
+              "RelativeDocumentMoniker": "BadEnglishGames\\Pages\\Profile.cshtml.cs",
+              "ToolTip": "C:\\C\u002B\u002B\\Pro150_ThinkTank\\BadEnglishGames\\BadEnglishGames\\Pages\\Profile.cshtml.cs",
+              "RelativeToolTip": "BadEnglishGames\\Pages\\Profile.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T16:49:31.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "C:\\C\u002B\u002B\\Pro150_ThinkTank\\BadEnglishGames\\BadEnglishGames\\Pages\\Profile.cshtml",
+              "RelativeDocumentMoniker": "BadEnglishGames\\Pages\\Profile.cshtml",
+              "ToolTip": "C:\\C\u002B\u002B\\Pro150_ThinkTank\\BadEnglishGames\\BadEnglishGames\\Pages\\Profile.cshtml",
+              "RelativeToolTip": "BadEnglishGames\\Pages\\Profile.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-18T16:49:24.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\C\u002B\u002B\\Pro150_ThinkTank\\BadEnglishGames\\BadEnglishGames\\Pages\\Register.cshtml",
+              "RelativeDocumentMoniker": "BadEnglishGames\\Pages\\Register.cshtml",
+              "ToolTip": "C:\\C\u002B\u002B\\Pro150_ThinkTank\\BadEnglishGames\\BadEnglishGames\\Pages\\Register.cshtml",
+              "RelativeToolTip": "BadEnglishGames\\Pages\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-18T16:49:23.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\C\u002B\u002B\\Pro150_ThinkTank\\BadEnglishGames\\BadEnglishGames\\Pages\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "BadEnglishGames\\Pages\\_ViewStart.cshtml",
+              "ToolTip": "C:\\C\u002B\u002B\\Pro150_ThinkTank\\BadEnglishGames\\BadEnglishGames\\Pages\\_ViewStart.cshtml",
+              "RelativeToolTip": "BadEnglishGames\\Pages\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-18T16:48:45.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\C\u002B\u002B\\Pro150_ThinkTank\\BadEnglishGames\\BadEnglishGames\\Program.cs",
               "RelativeDocumentMoniker": "BadEnglishGames\\Program.cs",
@@ -30,8 +131,7 @@
               "RelativeToolTip": "BadEnglishGames\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T16:08:23.733Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-12T16:08:23.733Z"
             }
           ]
         },

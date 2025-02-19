@@ -8,8 +8,18 @@
     <!--IMG-->
 
     <section>
-        <p id="Username"></p>
-        <p id="UserDescription"></p>
+        <form>
+            <div>
+        <lable for="Username">Username: </lable>
+        <input type="text" id="Username" name="Username" value="@Model.UserName" disabled />
+            </div>
+
+            <div>
+        <lable for="UserDescription">Description:</lable>
+        <textarea id = "UserDescription" name = "UserDescription" rows ="4" cols="50"></textarea>
+            </div>
+
+        </form>
         <div>
             <!--Top 3 Game Scores-->
         </div>
