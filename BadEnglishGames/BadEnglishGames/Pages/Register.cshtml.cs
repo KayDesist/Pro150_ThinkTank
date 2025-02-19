@@ -8,5 +8,14 @@ namespace BadEnglishGames.Pages
         public void OnGet()
         {
         }
+        private IActionResult OnPostSignUp()
+        {
+
+            return RedirectToAction("Index");
+        }
+        private IActionResult OnPostLogin()
+        {
+            return RedirectToAction("Login");
+        }
     }
 }
