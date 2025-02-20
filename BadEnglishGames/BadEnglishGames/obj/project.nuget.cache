@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "SL5lq/O875o=",
+  "dgSpecHash": "CfWxklkgp78=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kay\\Source\\Repos\\Pro150_ThinkTank\\BadEnglishGames\\BadEnglishGames\\BadEnglishGames.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Neumont\\Q6\\PRO150\\Pro150_ThinkTank\\BadEnglishGames\\BadEnglishGames\\BadEnglishGames.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\cschade\\.nuget\\packages\\mongodb.bson\\3.2.0\\mongodb.bson.3.2.0.nupkg.sha512",
+    "C:\\Users\\cschade\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\cschade\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
