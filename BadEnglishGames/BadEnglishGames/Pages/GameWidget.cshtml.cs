@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace BadEnglishGames.Pages
 {
-    public class HomePageModel : PageModel
+    public class GameWidgetModel : PageModel
     {
         public void OnGet()
         {
