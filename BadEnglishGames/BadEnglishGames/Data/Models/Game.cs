@@ -8,8 +8,9 @@ namespace BadEnglishGames.Data.Models
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string? Id { get; set; }
-        public int? GameID { get; set; } = null!;
         public string? GameTitle { get; set; }
         public string? GameDesc { get; set; }
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string? GameHighScoreId { get; set; }
     }
 }
