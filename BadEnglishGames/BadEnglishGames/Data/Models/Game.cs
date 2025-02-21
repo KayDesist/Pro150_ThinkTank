@@ -7,10 +7,11 @@ namespace BadEnglishGames.Data.Models
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string? Id { get; set; }
-        public string? GameTitle { get; set; }
-        public string? GameDesc { get; set; }
+        public string? id { get; set; }
+        public string? gameTitle { get; set; }
+        public string? gameDesc { get; set; }
+
         [BsonRepresentation(BsonType.ObjectId)]
-        public string? GameHighScoreId { get; set; }
+        public string? gameHighScoreID { get; set; }
     }
 }
