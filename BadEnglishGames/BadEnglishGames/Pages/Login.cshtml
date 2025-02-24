@@ -1,5 +1,9 @@
 ﻿@page
+@using BadEnglishGames.Data.DAL
 @model BadEnglishGames.Pages.LoginModel
 @{
-    int i = 9;
+    DatabaseController controller = new();
+    
+    var test = controller.GetGames();
+    int i = 0;
 }
