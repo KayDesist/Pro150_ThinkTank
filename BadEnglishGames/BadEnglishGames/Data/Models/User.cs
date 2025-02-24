@@ -1,10 +1,14 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
+
+
+using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
+
 
 namespace BadEnglishGames.Data.Models
 {
     public class User
     {
+
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string? id { get; set; }
