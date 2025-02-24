@@ -12,11 +12,19 @@ namespace BadEnglishGames.Data.Models
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string? id { get; set; }
-        public string? username { get; set; }
-        public string? password { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
         public string? userDesc { get; set; }
 
         [BsonRepresentation(BsonType.ObjectId)]
         public string? userHighScoreID { get; set; }
+
+        public User(string username, string password)
+        {
+            this.username = username;
+            this.password = password;
+        }
     }
+
+
 }
