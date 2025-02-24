@@ -7,6 +7,7 @@ namespace BadEnglishGames.Pages
 {
     public class ProfileModel : PageModel
     {
+        
         public string UserName { get; set; } = "FunnyUserName";
         [BindProperty]
         public string UserDescription { get; set; }
@@ -25,6 +26,7 @@ namespace BadEnglishGames.Pages
         public void OnGet()
         {
         }
+        // Creates a Upload folder inside the project if it does not exist and when a user uploads an images it gets sent to that newly created uploads folder and displays
         public async Task<IActionResult> OnPost()
         {
             if(!string.IsNullOrWhiteSpace(UserDescription))
@@ -53,6 +55,14 @@ namespace BadEnglishGames.Pages
             }
 
             return Page();
+        }
+
+        public IActionResult OnPostDeleteAccount()
+        {
+            // Sim to show that account has been delete will replace once we have DB Intergation
+            TempData["Message"] = "Your account has been deleted.";
+
+            return RedirectToPage("/Profile");
         }
     }
 }
