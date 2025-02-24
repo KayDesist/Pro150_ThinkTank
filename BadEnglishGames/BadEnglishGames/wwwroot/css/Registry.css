@@ -6,7 +6,7 @@
     font-family:"Open Sans",sans-serif;
 }
 
-body main{
+body {
     display:flex;
     align-items:center;
     justify-content:center;
@@ -15,7 +15,7 @@ body main{
     padding:0, 10px;
 }
 
-body::before main{
+body::before {
     content:"";
     position:absolute;
     width:100%;
@@ -50,7 +50,7 @@ h2{
     top:50%;
     left:0;
     transform:translateY(-50%);
-    color: #fff;
+    color: #ff0000;
     font-size:16px;
     pointer-events:none;
     transition:0.15s ease;
@@ -63,7 +63,7 @@ h2{
     border: none;
     outline: none;
     font-size: 16px;
-    color: #fff;
+    color: #ff0000;
 }
 
 .input-field input:focus ~ label, .input-field input:valid ~ label {
@@ -103,5 +103,8 @@ button:hover {
 .Login {
     text-align: center;
     margin-top: 30px;
-    color: #fff;
+    
+}
+.Question{
+    color: crimson;
 }

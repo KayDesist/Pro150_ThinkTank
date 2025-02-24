@@ -11,7 +11,7 @@ namespace BadEnglishGames.Pages
         public void OnGet()
         {
         }
-        private IActionResult OnPostSignUp()
+        public IActionResult OnPostSignUp()
         {
             if (temp == null) return RedirectToAction("Get");
             //check if username and email are unique
