@@ -10,11 +10,13 @@ namespace BadEnglishGames.Data.DAL
 {
     public static class DatabaseController
     {
+        private static HttpClient client = new HttpClient();
+
         public static List<Game> GetGames()
         {
             List<Game> games = new List<Game>();
 
-            HttpClient client = new HttpClient();
+            client = new();
             client.BaseAddress = new Uri("https://localhost:7116/");
             
 
@@ -24,14 +26,12 @@ namespace BadEnglishGames.Data.DAL
 
             return games;
         }
-
+        
         public static List<User> GetUsers()
         {
             List<User> users = new();
-
-            HttpClient client = new HttpClient();
+            client = new();
             client.BaseAddress = new Uri("https://localhost:7116/");
-
 
             HttpResponseMessage response = client.GetAsync("api/Users").Result;
             string result = response.Content.ReadAsStringAsync().Result;
@@ -42,9 +42,32 @@ namespace BadEnglishGames.Data.DAL
 
         public static User? GetUserByUsername(string username)
         {
-            return GetUsers().Where(user => user.username.Equals(username)).ElementAt(0);
+            client = new();
+            try
+            {
+
+                return GetUsers().Where(user => user.username.Equals(username)).ElementAt(0);
+            } catch (ArgumentOutOfRangeException e)
+            {
+                return null;
+            }
         }
 
+        
+
+        public async static void CreateUser(string username, string password)
+        {
+            User user = new(username, password);
+            client = new();
+
+            client.BaseAddress = new Uri("https://localhost:7116/");
+
+            string json = JsonSerializer.Serialize(user);
+
+            var response = await client.PostAsJsonAsync("api/Users", json);
+
+
+        }
         
     }
 }
