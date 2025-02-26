@@ -15,7 +15,7 @@ namespace BadEnglishGames.Data.DAL
             List<Game> games = new List<Game>();
 
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("https://localhost:7116/");
+            client.BaseAddress = new Uri("https://badenglishgames-dnc2gvcubka4dbgd.westus-01.azurewebsites.net/");
             
 
             HttpResponseMessage response = client.GetAsync("api/Games").Result;
@@ -30,7 +30,7 @@ namespace BadEnglishGames.Data.DAL
             List<User> users = new();
 
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("https://localhost:7116/");
+            client.BaseAddress = new Uri("https://badenglishgames-dnc2gvcubka4dbgd.westus-01.azurewebsites.net/");
 
 
             HttpResponseMessage response = client.GetAsync("api/Users").Result;
@@ -42,8 +42,14 @@ namespace BadEnglishGames.Data.DAL
 
         public static User? GetUserByUsername(string username)
         {
-            return GetUsers().Where(user => user.username.Equals(username)).ElementAt(0);
+            try
+            {
+                return GetUsers().Where(user => user.username.Equals(username)).ElementAt(0);
+            }
+            catch(ArgumentOutOfRangeException) { return null; }
         }
+
+        
 
         
     }
