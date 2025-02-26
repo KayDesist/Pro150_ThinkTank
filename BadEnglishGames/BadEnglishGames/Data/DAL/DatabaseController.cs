@@ -48,6 +48,10 @@ namespace BadEnglishGames.Data.DAL
             }
             catch(ArgumentOutOfRangeException) { return null; }
         }
+        public static bool CreateUser(User user)
+        {
+            return true;
+        }
 
         
 
