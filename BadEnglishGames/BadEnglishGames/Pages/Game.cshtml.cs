@@ -9,6 +9,7 @@ namespace BadEnglishGames.Pages
         public Game game { get; set; }
         public void OnGet()
         {
+
         }
     }
 }

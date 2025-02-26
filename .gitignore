@@ -398,3 +398,5 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+BadEnglishGames/BadEnglishGames/obj/Debug/net8.0/BadEnglishGames.AssemblyInfo.cs
+BadEnglishGames/BadEnglishGames/obj/Debug/net8.0/BadEnglishGames.AssemblyInfoInputs.cache
