@@ -1,1 +1,3 @@
 C:\Neumont\Q6\PRO150\Pro150_ThinkTank\BadEnglishGames\BadEnglishGames\wwwroot\css\Login.css
+C:\Neumont\Q6\PRO150\Pro150_ThinkTank\BadEnglishGames\BadEnglishGames\wwwroot\css\Registry.css
+C:\Neumont\Q6\PRO150\Pro150_ThinkTank\BadEnglishGames\BadEnglishGames\wwwroot\Images\Register\Register-bg.jpg

@@ -16,8 +16,13 @@ namespace BadEnglishGames.Data.DAL
         {
             List<Game> games = new List<Game>();
 
+<<<<<<< Updated upstream
             client = new();
             client.BaseAddress = new Uri("https://localhost:7116/");
+=======
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("https://badenglishgamesapi.azurewebsites.net/");
+>>>>>>> Stashed changes
             
 
             HttpResponseMessage response = client.GetAsync("api/Games").Result;
@@ -30,8 +35,15 @@ namespace BadEnglishGames.Data.DAL
         public static List<User> GetUsers()
         {
             List<User> users = new();
+<<<<<<< Updated upstream
             client = new();
             client.BaseAddress = new Uri("https://localhost:7116/");
+=======
+
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("https://badenglishgamesapi.azurewebsites.net/");
+
+>>>>>>> Stashed changes
 
             HttpResponseMessage response = client.GetAsync("api/Users").Result;
             string result = response.Content.ReadAsStringAsync().Result;
