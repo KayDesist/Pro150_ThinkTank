@@ -1,5 +1,21 @@
 ﻿@page
+@using BadEnglishGames.Data.DAL
 @model BadEnglishGames.Pages.LoginModel
 @{
-    int i = 9;
+    
 }
+<head>
+    <link rel="stylesheet" href="~/css/Login.css" asp-append-version="true" />
+</head>
+<body>
+    <div id="LoginHolder">
+        <form method="post" asp-page-handler="login">
+            <label><strong>Login</strong></label>
+            <input name="LoginUsername" placeholder="Username..."/>
+            <input name="LoginPassword" placeholder="Password..."/>
+            <p>@Model.LoginPopupText</p>
+            <input type="submit" />
+        </form>
+    </div>
+</body>
+

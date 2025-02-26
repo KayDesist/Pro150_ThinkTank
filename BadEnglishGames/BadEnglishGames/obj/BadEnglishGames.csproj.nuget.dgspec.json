@@ -54,6 +54,10 @@
             "Microsoft.AspNet.WebPages": {
               "target": "Package",
               "version": "[3.3.0, )"
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[3.2.0, )"
             }
           },
           "imports": [
