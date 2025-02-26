@@ -16,13 +16,9 @@ namespace BadEnglishGames.Pages
             if (temp == null) return RedirectToAction("Get");
             //check if username and email are unique
 
-            if (temp.Password != confirm) return RedirectToAction("Get");
+            if (temp.password != confirm) return RedirectToAction("Get");
 
             //add user to db
-
-            temp.ClearPassword();
-            temp = new User();
-            confirm = "";
             return RedirectToAction("Index");
         }
     }
