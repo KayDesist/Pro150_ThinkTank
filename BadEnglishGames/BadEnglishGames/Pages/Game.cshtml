@@ -14,16 +14,17 @@
     // }
 }
 
+<body>
+    <h1>TITLE</h1>
+    <div class="GameContainer">
 <header>
     <link rel="stylesheet" href="~/css/GamePage.css" asp-append-version="true" />
-
 </header>
 <body>
-    <h1>GAME TITLE</h1>
-    <div id="GameContainer">
-        GAME CONTAINER
+    <div id="GameContainer" class="Center">
+        <partial name="_Snake"/>
     </div>
-    <div id="DescriptionContainer">GAME DESC</div>
-    <div id="HighScoreContainer">HIGH SCORE</div>
+    <div id="DescriptionContainer" class="Center">GAME DESC</div>
+    <div id="HighScoreContainer" class="Center">HIGH SCORE</div>
 </body>
 
