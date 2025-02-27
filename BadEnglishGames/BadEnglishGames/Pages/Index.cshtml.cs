@@ -34,4 +34,6 @@ namespace BadEnglishGames.Pages
             return RedirectToPage($"./game/{gameTitle}");
         }
     }
-}
+} 
+
+//just adding a comment so i can push and fix some push issues before merging
