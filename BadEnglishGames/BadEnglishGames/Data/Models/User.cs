@@ -17,7 +17,7 @@ namespace BadEnglishGames.Data.Models
         public string? userDesc { get; set; }
 
         [BsonRepresentation(BsonType.ObjectId)]
-        public string? userHighScoreID { get; set; }
+        public string? UserHighScoreID { get; set; }
 
         public User(string username, string password)
         {
