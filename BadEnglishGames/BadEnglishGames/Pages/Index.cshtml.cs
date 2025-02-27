@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using BadEnglishGames.Models;
 using System.Collections.Generic;
+using BadEnglishGames.Data.DAL;
 
 namespace BadEnglishGames.Pages
 {
@@ -18,15 +19,13 @@ namespace BadEnglishGames.Pages
 
         public void OnGet()
         {
-            // Hardcoded list of games for now
-            Games = new List<Game>
+
+            Games= DatabaseController.GetGames(); 
+
+            foreach(var game in Games)
             {
-                new Game { Title = "Game 1", Description = "Description for Game 1", Route = "/game1" },
-                new Game { Title = "Game 2", Description = "Description for Game 2", Route = "/game2" },
-                new Game { Title = "Game 3", Description = "Description for Game 3", Route = "/game3" }
-            };
-                game.Route = $"./game/{gameTitle}";
-            }
+                game.Route = $"./game/{game.id}";
+            }   
         }
 
         public IActionResult OnPost(string gameId)

@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-﻿@page
-@model BadEnglishGames.Pages.GameModel
-@{
-    ViewData["Title"] = "Game";
-}
-
-<body>
-    <h1>@Model.Game.gameTitle</h1>
-    <div class="GameContainer">
-
-    </div>
-    <div class="DescriptionContainer"></div>
-    <div class="HighScoreContainer"></div>
-=======
-﻿@page "{GameTitle?}"
+@page "{GameTitle?}"
 @using BadEnglishGames.Data.DAL
 @model BadEnglishGames.Pages.GameModel
 @{
