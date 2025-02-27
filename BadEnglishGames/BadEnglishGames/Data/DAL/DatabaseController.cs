@@ -15,7 +15,7 @@ namespace BadEnglishGames.Data.DAL
             List<Game> games = new List<Game>();
 
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("https://badenglishgames-dnc2gvcubka4dbgd.westus-01.azurewebsites.net/");
+            client.BaseAddress = new Uri("https://badenglishgamesapi.azurewebsites.net/");
             
 
             HttpResponseMessage response = client.GetAsync("api/Games").Result;
@@ -30,7 +30,7 @@ namespace BadEnglishGames.Data.DAL
             List<User> users = new();
 
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("https://badenglishgames-dnc2gvcubka4dbgd.westus-01.azurewebsites.net/");
+            client.BaseAddress = new Uri("https://badenglishgamesapi.azurewebsites.net/");
 
 
             HttpResponseMessage response = client.GetAsync("api/Users").Result;

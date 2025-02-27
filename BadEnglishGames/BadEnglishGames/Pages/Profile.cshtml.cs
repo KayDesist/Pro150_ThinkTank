@@ -1,3 +1,4 @@
+using BadEnglishGames.Data.Models;
 using BadEnglishGames.wwwroot.Controller;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -7,15 +8,15 @@ namespace BadEnglishGames.Pages
 {
     public class ProfileModel : PageModel
     {
-        
-        public string UserName { get; set; } = "FunnyUserName";
-        [BindProperty]
-        public string UserDescription { get; set; }
 
+
+        public User users = new User("HelpMe", "1224");
+     
         [BindProperty]
         public Images image { get; set; }
 
         private readonly IWebHostEnvironment _environment;
+        
 
         public ProfileModel(IWebHostEnvironment environment)
         {
@@ -26,12 +27,15 @@ namespace BadEnglishGames.Pages
         public void OnGet()
         {
         }
-        // Creates a Upload folder inside the project if it does not exist and when a user uploads an images it gets sent to that newly created uploads folder and displays
+        
         public async Task<IActionResult> OnPost()
         {
-            if(!string.IsNullOrWhiteSpace(UserDescription))
+
+            users.username.ToString();
+
+            if(!string.IsNullOrWhiteSpace(users.userDesc))
              {
-                TempData["UserDescription"] = UserDescription;
+                TempData["UserDescription"] = users.userDesc;
             }
 
             if (image.file != null)
