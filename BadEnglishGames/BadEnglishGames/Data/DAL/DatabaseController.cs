@@ -23,7 +23,7 @@ namespace BadEnglishGames.Data.DAL
 
             HttpResponseMessage response = client.GetAsync("api/Games").Result;
             string result = response.Content.ReadAsStringAsync().Result;
-            games = JsonSerializer.Deserialize<List<Game>>(result)!;
+            games = JsonSerializer.Deserialize<List<Game>>(result)!; 
 
             return games;
         }

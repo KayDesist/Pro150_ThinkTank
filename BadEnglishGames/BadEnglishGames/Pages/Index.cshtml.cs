@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using BadEnglishGames.Models;
 using System.Collections.Generic;
 using BadEnglishGames.Data.DAL;
+using BadEnglishGames.Data.Models;
 
 namespace BadEnglishGames.Pages
 {
@@ -19,26 +19,19 @@ namespace BadEnglishGames.Pages
 
         public void OnGet()
         {
-
-            Games= DatabaseController.GetGames(); 
-
-            foreach(var game in Games)
-            {
-                game.Route = $"./game/{game.id}";
-            }   
+            Games = DatabaseController.GetGames();
         }
 
-        public IActionResult OnPost(string gameId)
+        public IActionResult OnPost(string gameTitle)
         {
-            // Logic to deduce which game play button was pressed
-            if (string.IsNullOrEmpty(gameId))
+            if (string.IsNullOrEmpty(gameTitle))
             {
-                // Handle invalid or missing game ID
+                // Handle invalid or missing game title
                 return RedirectToPage("/Index");
             }
 
-            // Redirect to the game page using the game ID
-            return RedirectToPage($"./game/{gameId}");
+            // Redirect to the game page using the game title
+            return RedirectToPage($"./game/{gameTitle}");
         }
     }
 }
