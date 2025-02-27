@@ -19,6 +19,15 @@ class Snake {
     }
 }
 
+class Food {
+    foodX = 0;
+    foodY = 0;
+    position = [];
+    isEatten = false;
+
+
+}
+
 var snake = new Snake(1, 7);
 
 //Getting User Input
@@ -38,7 +47,6 @@ document.onkeypress = (e) => {
     else if (key == "d".charCodeAt(0)) {
         snake.direction = [1, 0];
     }
-}
 
 //Setting up Game Tick
 function tick() {
