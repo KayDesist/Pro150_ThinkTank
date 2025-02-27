@@ -1,0 +1,26 @@
+﻿
+
+
+<head>
+    <link rel="stylesheet" href="~/css/Game/Snake.css" asp-append-version="true" />
+</head>
+<script src="js/snake.js"></script>
+<div class="Game">
+
+    @{
+       for(int rows = 0; rows < 12; rows++)
+       {
+            <div class="SnakeRow">
+                @{
+                    for (int cells = 0; cells < 30; cells++)
+                    {
+                        <div class="SnakeCell" id="@rows - @cells"></div>
+                    }
+                }
+            </div>
+       }
+    }
+</div>
+
+
+<div id="test"></div>
