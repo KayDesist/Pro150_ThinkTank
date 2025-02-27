@@ -14,11 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BadEnglishGames")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< Updated upstream
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96d2146ceec138e74a2b86544aebb5efbe73e6d7")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+557cae8f434f20cda6981afb0a3ab2c0d81b2e04")]
->>>>>>> Stashed changes
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bf17db7e43ef4a4fff6a375e60dd11288573fbc4")]
 [assembly: System.Reflection.AssemblyProductAttribute("BadEnglishGames")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BadEnglishGames")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

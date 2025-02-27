@@ -21,15 +21,12 @@ namespace BadEnglishGames.Pages
             // Hardcoded list of games for now
             Games = new List<Game>
             {
-<<<<<<< Updated upstream
                 new Game { Title = "Game 1", Description = "Description for Game 1", Route = "/game1" },
                 new Game { Title = "Game 2", Description = "Description for Game 2", Route = "/game2" },
                 new Game { Title = "Game 3", Description = "Description for Game 3", Route = "/game3" }
             };
-=======
                 game.Route = $"./game/{gameTitle}";
             }
->>>>>>> Stashed changes
         }
 
         public IActionResult OnPost(string gameId)
