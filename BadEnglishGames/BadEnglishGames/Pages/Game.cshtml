@@ -1,15 +1,29 @@
-﻿@page
+﻿@page "{GameTitle?}"
+@using BadEnglishGames.Data.DAL
 @model BadEnglishGames.Pages.GameModel
 @{
-    ViewData["Title"] = "Game";
+    //ViewData["Title"] = "Game";
+
+    // string title = RouteData.Values["GameTitle"].ToString();
+
+    // var game = DatabaseController.GetGameByTitle(title);
+
+    // if (game != null)
+    // {
+    //     Model.game = game;
+    // }
 }
 
-<body>
-    <h1>TITLE</h1>
-    <div class="GameContainer">
+<header>
+    <link rel="stylesheet" href="~/css/GamePage.css" asp-append-version="true" />
 
+</header>
+<body>
+    <h1>GAME TITLE</h1>
+    <div id="GameContainer">
+        GAME CONTAINER
     </div>
-    <div class="DescriptionContainer"></div>
-    <div class="HighScoreContainer"></div>
+    <div id="DescriptionContainer">GAME DESC</div>
+    <div id="HighScoreContainer">HIGH SCORE</div>
 </body>
 
