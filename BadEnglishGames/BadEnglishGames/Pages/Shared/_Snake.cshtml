@@ -6,25 +6,21 @@
 </head>
 <script src="js/snake.js"></script>
 <div class="Game">
-    <div class="SnakeRow">
-        <div class="SnakeCell"></div>
-        <div class="SnakeCell"></div>
-        <div class="SnakeCell"></div>
-        <div class="SnakeCell"></div>
-        <div class="SnakeCell"></div>
-        <div class="SnakeCell"></div>
-        <div class="SnakeCell"></div>
-        <div class="SnakeCell"></div>
-        <div class="SnakeCell"></div>
-        <div class="SnakeCell"></div>
-        <div class="SnakeCell"></div>
-        <div class="SnakeCell"></div>
-        <div class="SnakeCell"></div>
-        <div class="SnakeCell"></div>
-        <div class="SnakeCell"></div>
-        <div class="SnakeCell"></div>
-        <div class="SnakeCell"></div>
-        <div class="SnakeCell"></div>
-        <div class="SnakeCell"></div>
-    </div>
+
+    @{
+       for(int rows = 0; rows < 12; rows++)
+       {
+            <div class="SnakeRow">
+                @{
+                    for (int cells = 0; cells < 30; cells++)
+                    {
+                        <div class="SnakeCell" id="@rows - @cells"></div>
+                    }
+                }
+            </div>
+       }
+    }
 </div>
+
+
+<div id="test"></div>
