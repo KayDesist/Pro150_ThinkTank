@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using BadEnglishGames.Models;
 using System.Collections.Generic;
@@ -20,10 +21,28 @@ namespace BadEnglishGames.Pages
             // Hardcoded list of games for now
             Games = new List<Game>
             {
+<<<<<<< Updated upstream
                 new Game { Title = "Game 1", Description = "Description for Game 1", Route = "/game1" },
                 new Game { Title = "Game 2", Description = "Description for Game 2", Route = "/game2" },
                 new Game { Title = "Game 3", Description = "Description for Game 3", Route = "/game3" }
             };
+=======
+                game.Route = $"./game/{gameTitle}";
+            }
+>>>>>>> Stashed changes
+        }
+
+        public IActionResult OnPost(string gameId)
+        {
+            // Logic to deduce which game play button was pressed
+            if (string.IsNullOrEmpty(gameId))
+            {
+                // Handle invalid or missing game ID
+                return RedirectToPage("/Index");
+            }
+
+            // Redirect to the game page using the game ID
+            return RedirectToPage($"./game/{gameId}");
         }
     }
 }

@@ -10,4 +10,11 @@
     <Folder Include="Data\DAL\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Pages\Index - Copy.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,15 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div>
+    <h1>Welcome to Bad English Games</h1>
+    <div class="games-container">
+        @foreach (var game in Model.Games)
+        {
+            <partial name="GameWidget" model="game" />
+        }
+    </div>
+</div>
