@@ -1,4 +1,6 @@
 html {
+  width: 100%;
+  height: 100%;
   font-size: 14px;
 }
 
@@ -21,6 +23,7 @@ body {
   margin-bottom: 60px;
 }
 
+<<<<<<< HEAD
 /* for home page */
 games-container {
     display: flex;
@@ -47,3 +50,47 @@ button {
     button:hover {
         background-color: #0056b3;
     }
+=======
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+}
+
+.profile-image img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+ }
+
+form-group {
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 15px; 
+}
+
+
+.form-group label {
+    width: 150px; 
+    margin-right: 15px; 
+    font-weight: bold; 
+}
+
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; 
+}
+
+
+.form-group textarea {
+    resize: vertical; 
+    height: 100px; 
+}
+>>>>>>> main

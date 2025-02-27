@@ -1,0 +1,22 @@
+﻿
+#LoginHolder {
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    width: 400px;
+    border: 1px solid black;
+}
+
+#LoginHolder label {
+    display: flex;
+    justify-content: center;
+}
+
+#LoginHolder form {
+    display: flex;
+    flex-direction: column;
+}
+
+#LoginHolder form input {
+    margin: 5px;
+}

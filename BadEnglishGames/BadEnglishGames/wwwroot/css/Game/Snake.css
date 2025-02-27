@@ -1,0 +1,12 @@
+﻿.SnakeRow {
+    border: 1px solid black;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+}
+
+.SnakeCell {
+    border: 1px dashed grey;
+    height: 25px;
+    width: 25px;
+}
