@@ -1,4 +1,36 @@
 ﻿@page
 @model BadEnglishGames.Pages.RegisterModel
 @{
+    
 }
+<head>
+    <link rel="stylesheet" href="~/css/Registry.css" />
+</head>
+<body class="main">
+    <div class="wrapper Main">
+        <form action="#">
+            <h2>Register</h2>
+            <div class="input-field">
+                <input type="text" placeholder="Username" required />
+                
+            </div>
+            <div class="input-field">
+                <input type="text" placeholder="Email" required />
+                
+            </div>
+            <div class="input-field">
+                <input type="password" placeholder="Password" required />
+                
+            </div>
+            <div class="input-field">
+                <input type="password" placeholder="Confirm Password" required />
+                
+            </div>
+            <button type="submit" asp-page-handler="SignUp" >Sign Up Now</button>
+            <div class="Login">
+                <p class="Question">Already Have an Account? <a asp-page="/Login">Log in</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+    
