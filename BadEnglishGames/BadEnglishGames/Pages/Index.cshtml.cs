@@ -1,7 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using BadEnglishGames.Models;
 using System.Collections.Generic;
+using BadEnglishGames.Data.DAL;
+using BadEnglishGames.Data.Models;
 
 namespace BadEnglishGames.Pages
 {
@@ -18,28 +19,21 @@ namespace BadEnglishGames.Pages
 
         public void OnGet()
         {
-            // Hardcoded list of games for now
-            Games = new List<Game>
-            {
-                new Game { Title = "Game 1", Description = "Description for Game 1", Route = "/game1" },
-                new Game { Title = "Game 2", Description = "Description for Game 2", Route = "/game2" },
-                new Game { Title = "Game 3", Description = "Description for Game 3", Route = "/game3" }
-            };
-                game.Route = $"./game/{gameTitle}";
-            }
+            Games = DatabaseController.GetGames();
         }
 
-        public IActionResult OnPost(string gameId)
+        public IActionResult OnPost(string gameTitle)
         {
-            // Logic to deduce which game play button was pressed
-            if (string.IsNullOrEmpty(gameId))
+            if (string.IsNullOrEmpty(gameTitle))
             {
-                // Handle invalid or missing game ID
+                // Handle invalid or missing game title
                 return RedirectToPage("/Index");
             }
 
-            // Redirect to the game page using the game ID
-            return RedirectToPage($"./game/{gameId}");
+            // Redirect to the game page using the game title
+            return RedirectToPage($"./game/{gameTitle}");
         }
     }
-}
+} 
+
+//just adding a comment so i can push and fix some push issues before merging

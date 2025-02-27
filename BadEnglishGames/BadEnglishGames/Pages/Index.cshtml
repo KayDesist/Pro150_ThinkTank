@@ -9,9 +9,10 @@
     <div class="games-container">
         @foreach (var game in Model.Games)
         {
-            <a href="@game.Route">
+            <form method="post" asp-page-handler="OnPost">
+                <input type="hidden" name="gameTitle" value="@game.gameTitle" />
                 <partial name="GameWidget" model="game" />
-            </a>
+            </form>
         }
     </div>
 </div>
