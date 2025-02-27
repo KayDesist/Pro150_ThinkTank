@@ -49,8 +49,20 @@ namespace BadEnglishGames.Data.DAL
             catch(ArgumentOutOfRangeException) { return null; }
         }
 
+<<<<<<< Updated upstream
         
 
         
+=======
+        public static void UpdateUser(User user)
+        {
+            var message = new HttpRequestMessage
+            {
+                Content = JsonContent.Create(user),
+                Method = HttpMethod.Put,
+                RequestUri = new Uri("https://example.com/some-endpoint"),
+            };
+        }
+>>>>>>> Stashed changes
     }
 }
