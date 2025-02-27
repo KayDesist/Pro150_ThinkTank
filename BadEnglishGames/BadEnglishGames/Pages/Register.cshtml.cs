@@ -19,6 +19,11 @@ namespace BadEnglishGames.Pages
             if (temp.password != confirm) return RedirectToAction("Get");
 
             //add user to db
+            bool success = Data.DAL.DatabaseController.CreateUser(temp);
+            if (!success)
+            {
+                RedirectToAction("Get");
+            }
             return RedirectToAction("Index");
         }
     }

@@ -1,0 +1,24 @@
+﻿main {
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+#GameContainer {
+    height: 20em;
+    border: 2px solid grey;
+}
+
+.Center {
+    display: flex;
+    justify-content: center;
+}
+
+.Game {
+    width: 100%;
+    height: 100%;
+}

@@ -1,23 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "b5zWEJgvT8Q=",
+  "dgSpecHash": "3zC83L/rYV4=",
   "success": true,
-  "projectFilePath": "C:\\C++\\Pro150_ThinkTank\\BadEnglishGames\\BadEnglishGames\\BadEnglishGames.csproj",
+  "projectFilePath": "C:\\Neumont\\Q6\\PRO150\\Pro150_ThinkTank\\BadEnglishGames\\BadEnglishGames\\BadEnglishGames.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\nmendez\\.nuget\\packages\\microsoft.aspnet.razor\\3.3.0\\microsoft.aspnet.razor.3.3.0.nupkg.sha512",
-    "C:\\Users\\nmendez\\.nuget\\packages\\microsoft.aspnet.webpages\\3.3.0\\microsoft.aspnet.webpages.3.3.0.nupkg.sha512",
-    "C:\\Users\\nmendez\\.nuget\\packages\\microsoft.web.infrastructure\\1.0.0\\microsoft.web.infrastructure.1.0.0.nupkg.sha512",
-    "C:\\Users\\nmendez\\.nuget\\packages\\mongodb.bson\\3.2.0\\mongodb.bson.3.2.0.nupkg.sha512",
-    "C:\\Users\\nmendez\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
-    "C:\\Users\\nmendez\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+    "C:\\Users\\cschade\\.nuget\\packages\\microsoft.aspnet.razor\\3.3.0\\microsoft.aspnet.razor.3.3.0.nupkg.sha512",
+    "C:\\Users\\cschade\\.nuget\\packages\\microsoft.aspnet.webpages\\3.3.0\\microsoft.aspnet.webpages.3.3.0.nupkg.sha512",
+    "C:\\Users\\cschade\\.nuget\\packages\\microsoft.web.infrastructure\\1.0.0\\microsoft.web.infrastructure.1.0.0.nupkg.sha512",
+    "C:\\Users\\cschade\\.nuget\\packages\\mongodb.bson\\3.2.0\\mongodb.bson.3.2.0.nupkg.sha512",
+    "C:\\Users\\cschade\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\cschade\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
   ],
   "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\C++\\Pro150_ThinkTank\\BadEnglishGames\\BadEnglishGames\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    },
     {
       "code": "NU1701",
       "level": "Warning",

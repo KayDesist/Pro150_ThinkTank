@@ -7,8 +7,14 @@ namespace BadEnglishGames.Pages
     public class GameModel : PageModel
     {
         public Game game { get; set; }
+
+
+
         public void OnGet()
         {
+
         }
+
+
     }
 }
