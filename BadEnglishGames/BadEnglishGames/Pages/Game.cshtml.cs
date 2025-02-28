@@ -10,21 +10,19 @@ namespace BadEnglishGames.Pages
     {
         public Game game { get; set; }
 
-
-
         public void OnGet()
         {
-            //string? title = RouteData.Values["GameTitle"]?.ToString();
+            var title = RouteData.Values["GameTitle"];
 
-            //if (title != null)
-            //{
-            //    var game = DatabaseController.GetGameByTitle(title);
+            if (title != null)
+            {
+                var game = DatabaseController.GetGameByTitle(title.ToString());
 
-            //    if (game != null)
-            //    {
-            //        this.game = game;
-            //    }
-            //}
+                if (game != null)
+                {
+                    this.game = game;
+                }
+            }
         }
 
 

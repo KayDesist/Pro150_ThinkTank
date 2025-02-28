@@ -7,17 +7,15 @@ using System;
 using System.ComponentModel;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using System.Web.Helpers;
 
 namespace BadEnglishGames.Data.DAL
 {
     public static class DatabaseController
     {
-        static HttpClient client = new HttpClient();
         public static List<Game> GetGames()
         {
             List<Game> games = new List<Game>();
-
+            HttpClient client = new HttpClient();
             client.BaseAddress = new Uri("https://badenglishgamesapi.azurewebsites.net/");
             
 
@@ -31,7 +29,7 @@ namespace BadEnglishGames.Data.DAL
         public static List<User> GetUsers()
         {
             List<User> users = new();
-
+            HttpClient client = new HttpClient();
             client.BaseAddress = new Uri("https://badenglishgamesapi.azurewebsites.net/");
 
 
@@ -52,7 +50,7 @@ namespace BadEnglishGames.Data.DAL
         }
         public static bool CreateUser(User user)
         {
-
+            HttpClient client = new HttpClient();
             var message = new HttpRequestMessage
             {
                 Content = JsonContent.Create(user),
