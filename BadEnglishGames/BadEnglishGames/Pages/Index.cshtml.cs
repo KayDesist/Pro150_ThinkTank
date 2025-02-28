@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Collections.Generic;
 using BadEnglishGames.Data.DAL;
 using BadEnglishGames.Data.Models;
+using System.Xml.Linq;
 
 namespace BadEnglishGames.Pages
 {
@@ -24,14 +25,14 @@ namespace BadEnglishGames.Pages
 
         public IActionResult OnPost(string gameTitle)
         {
-            if (string.IsNullOrEmpty(gameTitle))
-            {
-                // Handle invalid or missing game title
-                return RedirectToPage("/Index");
-            }
+            //if (string.IsNullOrEmpty(gameTitle))
+            //{
+            //    // Handle invalid or missing game title
+            //    return RedirectToPage("/Index");
+            //}
 
             // Redirect to the game page using the game title
-            return RedirectToPage($"./game/{gameTitle}");
+            return Redirect($"/game/{gameTitle}");
         }
     }
 } 
