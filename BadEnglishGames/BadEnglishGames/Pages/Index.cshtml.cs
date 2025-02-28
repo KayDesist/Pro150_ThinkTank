@@ -31,7 +31,7 @@ namespace BadEnglishGames.Pages
             }
 
             // Redirect to the game page using the game title
-            return RedirectToPage($"./game/{gameTitle}");
+            return RedirectToPage($"/game");
         }
     }
 } 
