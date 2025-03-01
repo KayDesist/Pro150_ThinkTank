@@ -30,7 +30,6 @@ class Snake {
 
             var secondTailPosition = this.body[this.body.length - 2];
             var tailPosition = this.body[this.body.length - 1];
-
             
             var newDirection = [secondTailPosition[0] - tailPosition[0], secondTailPosition[1] - tailPosition[1]];
             var negNewDirection = [newDirection[0] * -1, newDirection[1] * -1];
@@ -120,6 +119,7 @@ class Game {
     startGame() {
         this.snake = new Snake(1, 1);
         this.apple = new Apple();
+        score = 0;
     }
 
     constructor() {
@@ -142,7 +142,7 @@ class Game {
     }
 
     screenCollision() {
-        if (this.snake.x < 0 || this.snake.x >= 12 || this.snake.y < 0 || this.snake.y >= 30) {
+        if (this.snake.x < 0 || this.snake.x >= screenHeight || this.snake.y < 0 || this.snake.y >= screenWidth) {
             this.gameOver();
         }
     }
@@ -221,10 +221,3 @@ function tick() {
 }
 
 setInterval(tick, 100);
-
-
-
-
-
-
-
