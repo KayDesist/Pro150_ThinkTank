@@ -119,7 +119,7 @@ class Game {
     startGame() {
         this.snake = new Snake(1, 1);
         this.apple = new Apple();
-        score = 0;
+        this.score = 0;
     }
 
     constructor() {
