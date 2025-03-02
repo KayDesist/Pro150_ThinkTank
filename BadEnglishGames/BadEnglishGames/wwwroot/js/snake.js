@@ -142,7 +142,7 @@ class Game {
     }
 
     screenCollision() {
-        if (this.snake.x < 0 || this.snake.x >= screenHeight || this.snake.y < 0 || this.snake.y >= screenWidth) {
+        if (this.snake.x < 0 || this.snake.x >= this.screenHeight || this.snake.y < 0 || this.snake.y >= this.screenWidth) {
             this.gameOver();
         }
     }
