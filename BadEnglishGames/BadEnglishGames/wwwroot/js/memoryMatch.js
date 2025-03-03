@@ -1,17 +1,23 @@
-﻿
-// Wait for the DOM to fully load before running the script
-document.addEventListener("DOMContentLoaded", function () { 
+﻿class MemoryMatchGame {
+    constructor() {
+        this.cards = ['A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'E', 'E', 'F', 'F', 'G', 'G', 'H', 'H'];
+        this.flippedCards = [];
+        this.matchedCards = [];
+        this.level = 1;
+        this.timer = null;
+        this.timeLeft = 100;
+        this.gameBoard = document.getElementById('game-board');
+        this.timerDisplay = document.getElementById('HighScoreContainer');
+        this.init();
+    }
 
-    // Initial card values and storing
-    let cards = ['A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'E', 'E', 'F', 'F', 'G', 'G', 'H', 'H'];
-    let flippedCards = [];
-    let matchedCards = [];
-    let level = 1;
-    let timer;
-    let timeLeft = 30;
+    // Initialize the game
+    init() {
+        this.startGame();
+    }
 
     // Shuffle function using Fisher-Yates algorithm
-    function shuffle(array) {
+    shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [array[i], array[j]] = [array[j], array[i]];
@@ -20,11 +26,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Create the game board
-    function createBoard() {
-        const gameBoard = document.getElementById('game-board');
-        gameBoard.innerHTML = ''; // Clear the board
-        const shuffledCards = shuffle(cards);
-        gameBoard.style.gridTemplateColumns = `repeat(${Math.sqrt(cards.length)}, 100px)`;
+    createBoard() {
+        this.gameBoard.innerHTML = ''; // Clear the board
+        const shuffledCards = this.shuffle(this.cards);
+        this.gameBoard.style.gridTemplateColumns = `repeat(${Math.sqrt(this.cards.length)}, 100px)`;
 
         shuffledCards.forEach((card) => {
             const cardElement = document.createElement('div');
@@ -33,81 +38,82 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="front">${card}</div>
                 <div class="back"></div>
             `;
-            cardElement.addEventListener('click', flipCard);
-            gameBoard.appendChild(cardElement);
+            cardElement.addEventListener('click', () => this.flipCard(cardElement));
+            this.gameBoard.appendChild(cardElement);
         });
     }
 
     // Flip card function
-    function flipCard() {
-        if (flippedCards.length < 2 && !this.classList.contains('flipped')) {
-            this.classList.add('flipped');
-            flippedCards.push(this);
+    flipCard(cardElement) {
+        if (this.flippedCards.length < 2 && !cardElement.classList.contains('flipped')) {
+            cardElement.classList.add('flipped');
+            this.flippedCards.push(cardElement);
 
-            if (flippedCards.length === 2) {
-                setTimeout(checkForMatch, 1000);
+            if (this.flippedCards.length === 2) {
+                setTimeout(() => this.checkForMatch(), 500); // Reduced delay for faster feedback
             }
         }
     }
 
     // Check for match function
-    function checkForMatch() {
-        const [card1, card2] = flippedCards;
+    checkForMatch() {
+        const [card1, card2] = this.flippedCards;
         const value1 = card1.querySelector('.front').textContent;
         const value2 = card2.querySelector('.front').textContent;
 
         if (value1 === value2) {
-            matchedCards.push(card1, card2);
-            card1.removeEventListener('click', flipCard);
-            card2.removeEventListener('click', flipCard);
+            this.matchedCards.push(card1, card2);
+            card1.removeEventListener('click', () => this.flipCard(card1));
+            card2.removeEventListener('click', () => this.flipCard(card2));
 
-            if (matchedCards.length === cards.length) {
-                clearInterval(timer);
+            if (this.matchedCards.length === this.cards.length) {
+                clearInterval(this.timer);
                 alert('Congratulations! You won! Moving to the next level...');
-                level++;
-                cards = cards.concat(['I', 'I', 'J', 'J', 'K', 'K', 'L', 'L']);
-                startGame();
+                this.level++;
+                this.cards = this.cards.concat(['I', 'I', 'J', 'J', 'K', 'K', 'L', 'L']);
+                this.startGame();
             }
         } else {
             setTimeout(() => {
                 card1.classList.remove('flipped');
                 card2.classList.remove('flipped');
-            }, 1000);
+            }, 500); // Reduced delay for faster flip-back
         }
 
-        flippedCards = [];
+        this.flippedCards = [];
     }
 
     // Timer function
-    function updateTimer() {
-        const timerDisplay = document.getElementById('HighScoreContainer');
-        timerDisplay.textContent = `Time Left: ${timeLeft}`;
-        if (timeLeft <= 0) {
-            clearInterval(timer);
+    updateTimer() {
+        this.timerDisplay.textContent = `Time Left: ${this.timeLeft}`;
+        if (this.timeLeft <= 0) {
+            clearInterval(this.timer);
             alert('Time is up! You lose!');
-            resetGame();
+            this.resetGame();
         } else {
-            timeLeft--;
+            this.timeLeft--;
         }
     }
 
     // Start the game
-    function startGame() {
-        matchedCards = [];
-        flippedCards = [];
-        timeLeft = 30;
-        createBoard();
-        timer = setInterval(updateTimer, 1000);
+    startGame() {
+        this.matchedCards = [];
+        this.flippedCards = [];
+        this.timeLeft = 100;
+        this.createBoard();
+        this.timer = setInterval(() => this.updateTimer(), 1000);
     }
 
     // Reset the game
-    function resetGame() {
-        clearInterval(timer);
-        level = 1;
-        cards = ['A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'E', 'E', 'F', 'F', 'G', 'G', 'H', 'H'];
-        startGame();
+    resetGame() {
+        clearInterval(this.timer);
+        this.level = 1;
+        this.cards = ['A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'E', 'E', 'F', 'F', 'G', 'G', 'H', 'H'];
+        this.startGame();
     }
+}
 
-    // Initialize the game
-    startGame();
+// Wait for the DOM to fully load before initializing the game
+document.addEventListener("DOMContentLoaded", () => {
+    const game = new MemoryMatchGame();
 });

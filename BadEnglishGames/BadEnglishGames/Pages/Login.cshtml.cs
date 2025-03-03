@@ -13,7 +13,7 @@ namespace BadEnglishGames.Pages
         public void OnGet()
         {
         }
-        public void OnPostLogin()
+        public IActionResult OnPostLogin()
         {
             string? username = Request.Form["LoginUsername"];
             string? password = Request.Form["LoginPassword"];
@@ -23,6 +23,12 @@ namespace BadEnglishGames.Pages
             {
                 ValidLogin = ValidateLogin(username, password);
             }
+
+            if (ValidLogin != null && ValidLogin == true)
+            {
+                return RedirectToPage("/Profile");
+            }
+            return Page();
         }
 
         private bool ValidateLogin(string username, string password)
@@ -36,12 +42,19 @@ namespace BadEnglishGames.Pages
             {
                 //After validating the username exists, you can verify that the given password is the correct password
                 validLogin = user.password == password;
+
+                if (validLogin)
+                {
+                    DatabaseController.CurrentUser = user;
+                }
             }
             else
             {
                 validLogin = false;
                 
             }
+
+            
 
             LoginPopupText = (validLogin) ? "" : "The Username And/Or Password is incorrect. Try Again";
             return validLogin;
