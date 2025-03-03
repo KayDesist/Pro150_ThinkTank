@@ -1,5 +1,6 @@
 ﻿@page
 @using System.Web.Helpers
+@using BadEnglishGames.Data.DAL
 @model BadEnglishGames.Pages.ProfileModel
 @{
     
@@ -20,12 +21,12 @@
     <form method="post" enctype="multipart/form-data">
         <div class="form-group">
             <label for="Username">Username: </label>
-            <input type="text" id="Username" name="Username" value="@Model.UserName" disabled />
+            <input type="text" id="Username" name="Username" value="@DatabaseController.CurrentUser.username" disabled />
         </div>
 
         <div class="form-group">
             <label for="UserDescription">Description:</label>
-            <textarea id="UserDescription" asp-for="UserDescription" ></textarea>
+                <textarea id="UserDescription">@DatabaseController.CurrentUser.userDesc</textarea>
         </div>
 
         <div class="form-group">

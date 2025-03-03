@@ -18,5 +18,7 @@ namespace BadEnglishGames.Data.Models
         public string? user2Id { get; set; }
         [BsonRepresentation(BsonType.ObjectId)]
         public string? user3Id { get; set; }
+        public int[]? highScores { get; set; }
+
     }
 }

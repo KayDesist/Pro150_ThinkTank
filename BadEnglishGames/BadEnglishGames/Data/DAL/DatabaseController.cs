@@ -13,6 +13,8 @@ namespace BadEnglishGames.Data.DAL
     public static class DatabaseController
     {
 
+        public static User? CurrentUser { get; set; } = null;
+
         #region Games
         public static List<Game> GetGames()
         {
@@ -69,7 +71,7 @@ namespace BadEnglishGames.Data.DAL
             {
                 Content = JsonContent.Create(user),
                 Method = HttpMethod.Post,
-                RequestUri = new Uri("https://example.com/some-endpoint"),
+                RequestUri = new Uri("https://badenglishgamesapi.azurewebsites.net/api/users/"),
             };
 
             return client.SendAsync(message).Result.IsSuccessStatusCode;
@@ -82,7 +84,7 @@ namespace BadEnglishGames.Data.DAL
             {
                 Content = JsonContent.Create(user),
                 Method = HttpMethod.Put,
-                RequestUri = new Uri("https://example.com/some-endpoint"),
+                RequestUri = new Uri("https://badenglishgamesapi.azurewebsites.net/api/users/"),
             };
         }
         #endregion
@@ -116,14 +118,56 @@ namespace BadEnglishGames.Data.DAL
             return highScores.ElementAt(0);
         }
 
-        public static void UpdateGameHighScore(Game game)
+        public static void UpdateGameHighScore(GameHighScore highScore)
         {
-            GameHighScore highScore = GetGameHighScore(game);
+            var message = new HttpRequestMessage
+            {
+                Content = JsonContent.Create(highScore),
+                Method = HttpMethod.Put,
+                RequestUri = new Uri("https://badenglishgamesapi.azurewebsites.net/api/gamehighscore/"),
+            };
         }
 
         #endregion
 
         #region UserHighScore
+        public static List<UserHighScore> GetUserHighScores()
+        {
+            List<UserHighScore> highScores = new();
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("https://badenglishgamesapi.azurewebsites.net/");
+
+
+            HttpResponseMessage response = client.GetAsync("api/Userhighscore").Result;
+            string result = response.Content.ReadAsStringAsync().Result;
+            highScores = JsonSerializer.Deserialize<List<UserHighScore>>(result)!;
+
+            return highScores;
+        }
+
+        public static UserHighScore GetUserHighScore(User game)
+        {
+            List<UserHighScore> highScores = new();
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("https://badenglishgamesapi.azurewebsites.net/");
+
+
+            HttpResponseMessage response = client.GetAsync($"api/Userhighscore/{game.userHighScoreID}").Result;
+            string result = response.Content.ReadAsStringAsync().Result;
+            highScores = JsonSerializer.Deserialize<List<UserHighScore>>(result)!;
+
+            return highScores.ElementAt(0);
+        }
+
+        public static void UpdateUserHighScore(UserHighScore highScore)
+        {
+            var message = new HttpRequestMessage
+            {
+                Content = JsonContent.Create(highScore),
+                Method = HttpMethod.Put,
+                RequestUri = new Uri("https://badenglishgamesapi.azurewebsites.net/api/userhighscore/"),
+            };
+        }
         #endregion
     }
 }
