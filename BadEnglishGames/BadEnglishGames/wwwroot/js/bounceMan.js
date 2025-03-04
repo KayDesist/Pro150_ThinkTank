@@ -77,6 +77,10 @@ class Platform {
         this.position.x = Math.floor(Math.random() * 316);
         this.position.y = Math.floor(Math.random() * 316);
     }
+
+    DrawPlatform() {
+        ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
+    }
 }
 
 class Game {
