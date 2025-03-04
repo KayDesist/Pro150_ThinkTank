@@ -3,12 +3,12 @@
     padding:0%;
     margin:0%;
 }
-body {
+.main {
     background-color: #dda15e;
     color:#27374d;
     min-height:100vh;
 }
-.container {
+.not-container {
     width: 400px;
     display: flex;
     flex-direction: column;
