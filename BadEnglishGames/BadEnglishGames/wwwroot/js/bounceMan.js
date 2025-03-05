@@ -23,6 +23,9 @@ class Player {
     xVelocity = 0;
     yVelocity = 0;
 
+    score = 0;
+
+
     //Getting the Right Side Position
     GetRightSide() {
         return this.position.x + this.width;
@@ -67,11 +70,6 @@ class Player {
     }
 
     CheckPlatformCollision(platform) {
-        document.getElementById("test").innerHTML = this.GetRightSide();
-
-        
-
-
         if (this.GetBottomSide() > platform.position.y + platform.height) return;
 
         if (this.GetBottomSide() >= platform.position.y) {
@@ -79,6 +77,9 @@ class Player {
             if (this.GetRightSide() >= platform.position.x && this.position.x <= platform.position.x + platform.width) {
                 this.position.y = platform.position.y - this.height;
                 this.yVelocity = 0;
+                if (!platform.hasLanded) this.score += 10;
+                platform.hasLanded = true;
+
             }
 
         }
@@ -104,6 +105,8 @@ class Platform {
 class Game {
     //Assigning local variables to base values
     gravity = 1;
+    secondsPlayed = 0;
+
     constructor() {
         this.canvas = document.getElementById("GameArea");
         this.player = new Player();
@@ -113,6 +116,10 @@ class Game {
         this.context = this.canvas.getContext("2d");
 
         this.platforms = [new Platform(1)];
+    }
+
+    UpdateSecondsPlayed() {
+        this.secondsPlayed++;
     }
 
     //Clearing the screen so that we can redraw
@@ -148,6 +155,7 @@ class Game {
 
     KeepPlayerWithinScreen() {
         this.player.position.x = (this.player.position.x <= 0) ? 0 : (this.player.GetRightSide() >= this.canvas.width) ? this.canvas.width - this.player.width : this.player.position.x;
+        if (this.player.GetBottomSide() >= this.canvas.height && this.HasTouchedFirstPlatform()) this.GameOver();
         this.player.position.y = (this.player.position.y <= 0) ? 0 : (this.player.GetBottomSide() >= this.canvas.height) ? this.canvas.height - this.player.height : this.player.position.y;
     }
 
@@ -155,6 +163,21 @@ class Game {
         for (var platform of this.platforms) {
             platform.position.y += amt;
         }
+    }
+
+    HasTouchedFirstPlatform() {
+        var hasLanded = false;
+        for (var platform of this.platforms) {
+            if (platform.hasLanded) {
+                hasLanded = platform.hasLanded;
+                break;
+            }
+        }
+        return hasLanded;
+    }
+
+    GameOver() {
+        alert("YOU SUCK AT THIS GAME! Score: " + this.player.score);
     }
 }
 
@@ -170,11 +193,11 @@ document.onkeydown = (e) => {
     }
 
     if (key == "a") {
-        game.player.Move(-2);
+        game.player.Move(-4);
     }
 
     if (key == "d") {
-        game.player.Move(2);
+        game.player.Move(4);
     }
 }
 
@@ -200,7 +223,12 @@ function PushPlatformsDown() {
     game.PushAllPlatformsDown(10);
 }
 
-setInterval(tick, 10);
-setInterval(SpawnPlatform, 700);
+function Timer() {
+    game.UpdateSecondsPlayed();
+    document.getElementById("test").innerHTML = game.secondsPlayed + "s";
+}
 
-setInterval(PushPlatformsDown, 500);
+setInterval(tick, 10);
+setInterval(SpawnPlatform, 500);
+setInterval(Timer, 1000);
+setInterval(PushPlatformsDown, 600);
