@@ -23,7 +23,6 @@ body {
   margin-bottom: 60px;
 }
 
-<<<<<<< HEAD
 /* for home page */
 games-container {
     display: flex;
@@ -47,10 +46,12 @@ button {
     margin-top: 10px;
 }
 
-    button:hover {
+button:hover {
         background-color: #0056b3;
-    }
-=======
+} 
+
+
+
 .profile-image {
     width: 200px;
     height: 200px;
@@ -93,4 +94,4 @@ form-group {
     resize: vertical; 
     height: 100px; 
 }
->>>>>>> main
+
