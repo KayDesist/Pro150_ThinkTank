@@ -24,7 +24,7 @@ body {
 }
 
 /* for home page */
-games-container {
+.games-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
