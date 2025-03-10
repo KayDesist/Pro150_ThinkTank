@@ -120,10 +120,6 @@ function moveBlocks(e) {
     if (availIndexes.length === 0 && check === true) {
         gameOver("loose");
     }
-
-    if (moves % moveFactor === 0) {
-        generateNewBlock();
-    }
 }
 
 setTimeout(() => { //adds new options after some time
