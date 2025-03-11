@@ -1,12 +1,8 @@
-* {
-    box-sizing: border-box;
-    padding:0%;
-    margin:0%;
-}
+
 .not-main {
-    background-color: #dda15e;
+    background-color: #D67751;
     color:#27374d;
-    min-height:100vh;
+    min-height:70vh;
 }
 .not-container {
     width: 400px;
