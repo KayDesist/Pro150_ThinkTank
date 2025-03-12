@@ -11,11 +11,17 @@ html {
 }
 
 footer {
-    background-color: #943915;
+    background-color: #571c06b1; 
+    border: 1px solid #943915;
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+  box-shadow: 0 0 0 0.1rem #ccc, 0 0 0 0.25rem #1F0A02;
+} 
+
+header{
+    background-color: #571c06b1; 
+    color: white;
 }
 
 html {
@@ -25,9 +31,11 @@ html {
 
 body {
     margin-bottom: 60px;
-    color: white;
-    background-color: #D67751;
+    color:#ccc ;
+    background-color: #D67751; 
+   
 }
+
 
 /* for home page */
 .games-container {
@@ -37,25 +45,27 @@ body {
 }
 
 .game-widget {
-    border: 1px solid #ccc;
+    border: 1px solid #943915; 
     padding: 10px;
     width: 200px;
     text-align: center;
-    background-color: #802C0B;
+    background-color: #943915; 
+    box-shadow: 2.5px 5px 10px 1.5px #071f2980;
 }
 
 button {
-    background-color: #007bff;
-    color: white;
+    background-color: #ac3d11;
+    color: #ccc;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     margin-top: 10px;
 }
 
-button:hover {
-        background-color: #0056b3;
-} 
+
+    button:hover {
+        background-color: #5a1f07;
+    } 
 
 
 
