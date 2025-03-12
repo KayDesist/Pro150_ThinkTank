@@ -68,7 +68,9 @@ namespace BadEnglishGames.Pages
             // Sim to show that account has been delete will replace once we have DB Intergation
             TempData["Message"] = "Your account has been deleted.";
 
-            return RedirectToPage("/Profile");
+            DatabaseController.CurrentUser = null;
+
+            return RedirectToPage("/Login");
         }
     }
 }

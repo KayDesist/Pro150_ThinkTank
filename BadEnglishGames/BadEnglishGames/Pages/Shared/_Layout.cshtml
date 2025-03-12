@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using BadEnglishGames.Data.DAL
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -14,7 +15,7 @@
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">BadEnglishGames</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
@@ -22,12 +23,24 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Login">Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Profile">Profile</a>
-                        </li>
+                        @{
+                            if (DatabaseController.CurrentUser == null)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/Login">Login</a>
+                                </li>
+                            }
+                        }
+                        
+                        @{
+                            if (DatabaseController.CurrentUser != null)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/Profile">Welcome @DatabaseController.CurrentUser.username</a>
+                                </li>
+                            }
+                        }
+                        
                     </ul>
                 </div>
             </div>
