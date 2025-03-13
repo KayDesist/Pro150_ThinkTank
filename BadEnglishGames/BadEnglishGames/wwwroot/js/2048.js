@@ -69,7 +69,7 @@ const arrayColumn = (arr, n) => arr.map((x) => x[n]);
 
 function moveBlocks(e) {
     if (e.key !== "ArrowLeft" && e.key !== "ArrowRight" && e.key !== "ArrowUp" && e.key !== "ArrowDown"
-        && e.key !== "A" && e.key !== "D" && e.key !== "W" && e.key !== "S") {
+        && e.key !== "a" && e.key !== "d" && e.key !== "w" && e.key !== "s") {
         return; //early out for no valid input
     }
     moves++;
@@ -86,25 +86,25 @@ function moveBlocks(e) {
     let row3 = matrix[2];
     let row4 = matrix[3];
 
-    if (e.key === "ArrowLeft" || e.key === "A") {
+    if (e.key === "ArrowLeft" || e.key === "a") {
         moveLeft(row1);
         moveLeft(row2);
         moveLeft(row3);
         moveLeft(row4);
     }
-    if (e.key === "ArrowRight" || e.key === "D") {
+    if (e.key === "ArrowRight" || e.key === "d") {
         moveRight(row1);
         moveRight(row2);
         moveRight(row3);
         moveRight(row4);
     }
-    if (e.key === "ArrowUp" || e.key === "W") {
+    if (e.key === "ArrowUp" || e.key === "w") {
         moveLeft(col1);
         moveLeft(col2);
         moveLeft(col3);
         moveLeft(col4);
     }
-    if (e.key === "ArrowDown" || e.key === "S") {
+    if (e.key === "ArrowDown" || e.key === "s") {
         moveRight(col1);
         moveRight(col2);
         moveRight(col3);
@@ -119,10 +119,6 @@ function moveBlocks(e) {
 
     if (availIndexes.length === 0 && check === true) {
         gameOver("loose");
-    }
-
-    if (moves % moveFactor === 0) {
-        generateNewBlock();
     }
 }
 

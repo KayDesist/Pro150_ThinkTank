@@ -1,12 +1,8 @@
-* {
-    box-sizing: border-box;
-    padding:0%;
-    margin:0%;
-}
-.main {
-    background-color: #dda15e;
-    color:#27374d;
-    min-height:100vh;
+
+.not-main {
+    background-color: #D67751;
+    color:#ccc;
+    min-height:70vh;
 }
 .not-container {
     width: 400px;
