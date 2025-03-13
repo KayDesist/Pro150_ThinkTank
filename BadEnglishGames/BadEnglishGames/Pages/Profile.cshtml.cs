@@ -10,6 +10,10 @@ namespace BadEnglishGames.Pages
     public class ProfileModel : PageModel
     {
 
+        public bool hasSaved = false;
+        public bool hasStartedDelete = false;
+
+
         User user = new("temp", "temp");
 
         [BindProperty]
@@ -31,7 +35,7 @@ namespace BadEnglishGames.Pages
             }
         }
         // Creates a Upload folder inside the project if it does not exist and when a user uploads an images it gets sent to that newly created uploads folder and displays
-        public async Task<IActionResult> OnPost()
+        public async Task<IActionResult> OnPostSave()
         {
             if(!string.IsNullOrWhiteSpace(user.userDesc))
              {
@@ -58,9 +62,21 @@ namespace BadEnglishGames.Pages
                 image.path = "/uploads/" + fileName;
             }
 
+            hasSaved = true;
+
             DatabaseController.UpdateUser(user);
 
             return Page();
+        }
+
+        public void OnPostDeleteStart()
+        {
+            hasStartedDelete = true;
+        }
+
+        public void OnPostEditProfile()
+        {
+            hasSaved = false;
         }
 
         public IActionResult OnPostDeleteAccount()
@@ -69,6 +85,7 @@ namespace BadEnglishGames.Pages
             TempData["Message"] = "Your account has been deleted.";
 
             DatabaseController.CurrentUser = null;
+
 
             return RedirectToPage("/Login");
         }

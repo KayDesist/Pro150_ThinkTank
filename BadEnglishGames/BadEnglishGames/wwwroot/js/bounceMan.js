@@ -24,6 +24,7 @@ class Player {
     yVelocity = 0;
 
     score = 0;
+    isGrounded = true;
 
 
     //Getting the Right Side Position
@@ -38,7 +39,12 @@ class Player {
 
     //Applying vertical velocity
     Jump() {
-        this.yVelocity = -15; //Applying Negative Velocity since y=0 is the top
+        if (this.isGrounded) {
+            this.yVelocity = -15; //Applying Negative Velocity since y=0 is the top
+            this.isGrounded = false;
+        }
+        
+
     }
 
     //Applying horizontal velocity
@@ -79,7 +85,7 @@ class Player {
                 this.yVelocity = 0;
                 if (!platform.hasLanded) this.score += 10;
                 platform.hasLanded = true;
-
+                this.isGrounded = true;
             }
 
         }
@@ -106,8 +112,9 @@ class Game {
     //Assigning local variables to base values
     gravity = 1;
     secondsPlayed = 0;
+    gameOver = false;
 
-    constructor() {
+    Restart() {
         this.canvas = document.getElementById("GameArea");
         this.player = new Player();
 
@@ -116,6 +123,9 @@ class Game {
         this.context = this.canvas.getContext("2d");
 
         this.platforms = [new Platform(1)];
+    }
+    constructor() {
+        this.Restart();
     }
 
     UpdateSecondsPlayed() {
@@ -141,6 +151,8 @@ class Game {
         }
     }
 
+    
+
     //Runs all the update logic for the game
     Update() {
         this.Clear();
@@ -155,7 +167,7 @@ class Game {
 
     KeepPlayerWithinScreen() {
         this.player.position.x = (this.player.position.x <= 0) ? 0 : (this.player.GetRightSide() >= this.canvas.width) ? this.canvas.width - this.player.width : this.player.position.x;
-        if (this.player.GetBottomSide() >= this.canvas.height && this.HasTouchedFirstPlatform()) this.GameOver();
+        if (this.player.GetBottomSide() >= this.canvas.height && this.HasTouchedFirstPlatform() && !this.gameOver) this.GameOver();
         this.player.position.y = (this.player.position.y <= 0) ? 0 : (this.player.GetBottomSide() >= this.canvas.height) ? this.canvas.height - this.player.height : this.player.position.y;
     }
 
@@ -177,7 +189,12 @@ class Game {
     }
 
     GameOver() {
-        alert("YOU SUCK AT THIS GAME! Score: " + this.player.score);
+        if (!this.gameOver) {
+            alert("YOU SUCK AT THIS GAME! Score: " + this.player.score);
+            this.gameOver = true;
+            Restart();
+        }
+        
     }
 }
 
