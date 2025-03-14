@@ -8,22 +8,18 @@
 </head>
 <div class="not-main">
     <div class="wrapper">
-        <form action="#">
+        <form method="post" asp-page-handler="SignUp">
             <h2>Register</h2>
             <div class="input-field">
-                <input type="text" placeholder="Username" required />
+                <input type="text" placeholder="Username" asp-for="@Model.temp.username" required />
                 
             </div>
             <div class="input-field">
-                <input type="text" placeholder="Email" required />
+                <input type="password" placeholder="Password" asp-for="@Model.temp.password" required />
                 
             </div>
             <div class="input-field">
-                <input type="password" placeholder="Password" required />
-                
-            </div>
-            <div class="input-field">
-                <input type="password" placeholder="Confirm Password" required />
+                <input type="password" placeholder="Confirm Password" asp-for="@Model.Confirm" required />
                 
             </div>
             <button type="submit" asp-page-handler="SignUp" >Sign Up Now</button>
