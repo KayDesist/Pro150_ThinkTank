@@ -16,7 +16,7 @@ class Board {
 // Player Class
 class Player {
     constructor() {
-        this.width = 300;
+        this.width = 250;
         this.height = 10;
         this.velocityX = 60;
         this.x = 0;
@@ -85,7 +85,7 @@ class Game {
         this.createBlocks();
 
         // Add Event Listener
-        document.addEventListener("keydown", this.movePlayer.bind(this)).setInterval(10);
+        document.addEventListener("keydown", this.movePlayer.bind(this));
 
         // Start the game loop
         requestAnimationFrame(this.update.bind(this));
@@ -189,15 +189,16 @@ class Game {
            
             let nextPlayerX = this.player.x + this.player.velocityX;
             if (!this.outOfBounds(nextPlayerX)) this.player.x = nextPlayerX;
-            
-            }
 
         }
     }
 
     outOfBounds(xPosition) {
+
         return (xPosition < 0 || xPosition + this.player.width > this.board.boardWidth);
-}
+    }
+    
+
 
     detectCollision(a, b) {
         return a.x < b.x + b.width &&

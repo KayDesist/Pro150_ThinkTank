@@ -7,15 +7,18 @@
 <head>
     <link rel="stylesheet" href="~/css/Login.css" asp-append-version="true" />
 </head>
-<body>
+
+<div id="LoginContainer">
     <div id="LoginHolder">
         <form method="post" asp-page-handler="login">
             <label><strong>Login</strong></label>
-            <input name="LoginUsername" placeholder="Username..."/>
-            <input name="LoginPassword" placeholder="Password..."/>
+            <input name="LoginUsername" placeholder="Username..." />
+            <input name="LoginPassword" placeholder="Password..." />
+            <a asp-page-handler="Register">Register A New Account</a>
             <p>@Model.LoginPopupText</p>
             <input type="submit" />
         </form>
     </div>
-</body>
+</div>
+
 

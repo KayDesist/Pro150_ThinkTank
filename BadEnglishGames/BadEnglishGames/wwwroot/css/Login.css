@@ -20,3 +20,10 @@
 #LoginHolder form input {
     margin: 5px;
 }
+
+#LoginContainer {
+    height: 20em;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}

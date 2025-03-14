@@ -13,6 +13,11 @@ namespace BadEnglishGames.Pages
         public void OnGet()
         {
         }
+
+        public IActionResult OnGetRegister()
+        {
+            return Redirect("./Register");
+        }
         public IActionResult OnPostLogin()
         {
             string? username = Request.Form["LoginUsername"];
