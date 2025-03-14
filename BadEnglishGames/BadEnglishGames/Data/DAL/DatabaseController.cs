@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using MongoDB.Bson.IO;
 using System;
 using System.ComponentModel;
+using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -12,7 +13,6 @@ namespace BadEnglishGames.Data.DAL
 {
     public static class DatabaseController
     {
-
         public static User? CurrentUser { get; set; } = null;
 
         #region Games
@@ -80,12 +80,28 @@ namespace BadEnglishGames.Data.DAL
 
         public static void UpdateUser(User user)
         {
-            var message = new HttpRequestMessage
+            //PUT request 
+
+            string userJSON = JsonSerializer.Serialize(user);
+            HttpContent content = new StringContent(userJSON, Encoding.UTF8, "application/json");
+            using (HttpClient client = new HttpClient())
             {
-                Content = JsonContent.Create(user),
-                Method = HttpMethod.Put,
-                RequestUri = new Uri("https://badenglishgamesapi.azurewebsites.net/api/users/"),
-            };
+                // Add the user ID to the URL
+                var userId = user.id; // Or however you access the user's ID
+                var stuff = client.PutAsync($"https://badenglishgamesapi.azurewebsites.net/api/users/{userId}", content).Result;
+
+                // Check the response
+                if (stuff.IsSuccessStatusCode)
+                {
+                    // Request succeeded
+                    Console.WriteLine("Update successful!");
+                }
+                else
+                {
+                    // Request failed
+                    Console.WriteLine($"Error: {stuff.StatusCode} - {stuff.ReasonPhrase}");
+                }
+            }
         }
         #endregion
 

@@ -37,10 +37,11 @@ namespace BadEnglishGames.Pages
         // Creates a Upload folder inside the project if it does not exist and when a user uploads an images it gets sent to that newly created uploads folder and displays
         public async Task<IActionResult> OnPostSave()
         {
-            if(!string.IsNullOrWhiteSpace(user.userDesc))
-             {
-                TempData["UserDescription"] = user.userDesc;
-            }
+            int i = 0;
+
+            user = DatabaseController.CurrentUser;
+
+            user.userDesc = Request.Form["ProfileUserDesc"];
 
             if (image.file != null)
             {

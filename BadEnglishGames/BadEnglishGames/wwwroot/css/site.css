@@ -90,8 +90,7 @@ button {
     height: 50px;
     margin: 10px;
     color: black;
-    display: flex;
-    justify-content: center;
+    
 }
 
 form-group {
